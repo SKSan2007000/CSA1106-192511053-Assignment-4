@@ -1,0 +1,17 @@
+digraph "layers" { rankdir=TB; bgcolor="white"; graph [label="Layered online shopping architecture", labelloc=t, fontsize=18, fontname="Arial", pad=0.25, nodesep=0.45, ranksep=0.55]; node [fontname="Arial", fontsize=10, margin="0.12,0.08"]; edge [fontname="Arial", fontsize=9, color="#52627A", arrowsize=0.7];
+"Web / Mobile View" [label="Web / Mobile View", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Controller" [label="Controller", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Application Service" [label="Application Service", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Domain Model" [label="Domain Model", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Repository Interface" [label="Repository Interface", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OODBMS Adapter" [label="OODBMS Adapter", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Object Database" [label="Object Database", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Web / Mobile View" -> "Controller";
+"Controller" -> "Application Service";
+"Application Service" -> "Domain Model";
+"Application Service" -> "Repository Interface";
+"Repository Interface" -> "OODBMS Adapter";
+"OODBMS Adapter" -> "Object Database";
+"Object Database" -> "OODBMS Adapter" [label="objects"];
+"OODBMS Adapter" -> "Repository Interface" [label="entities"];
+}

@@ -1,0 +1,11 @@
+digraph "strategy" { rankdir=LR; bgcolor="white"; graph [label="Strategy pattern for payment", labelloc=t, fontsize=18, fontname="Arial", pad=0.25, nodesep=0.45, ranksep=0.55]; node [fontname="Arial", fontsize=10, margin="0.12,0.08"]; edge [fontname="Arial", fontsize=9, color="#52627A", arrowsize=0.7];
+"CheckoutService" [label="CheckoutService", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"PaymentStrategy" [label="PaymentStrategy", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"CardPayment" [label="CardPayment", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"UPIPayment" [label="UPIPayment", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"WalletPayment" [label="WalletPayment", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"CheckoutService" -> "PaymentStrategy" [label="uses"];
+"PaymentStrategy" -> "CardPayment" [arrowhead=empty];
+"PaymentStrategy" -> "UPIPayment" [arrowhead=empty];
+"PaymentStrategy" -> "WalletPayment" [arrowhead=empty];
+}

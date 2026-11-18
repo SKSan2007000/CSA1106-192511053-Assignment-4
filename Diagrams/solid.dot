@@ -1,0 +1,19 @@
+digraph "solid" { rankdir=LR; bgcolor="white"; graph [label="SOLID-oriented order design", labelloc=t, fontsize=18, fontname="Arial", pad=0.25, nodesep=0.45, ranksep=0.55]; node [fontname="Arial", fontsize=10, margin="0.12,0.08"]; edge [fontname="Arial", fontsize=9, color="#52627A", arrowsize=0.7];
+"CheckoutController" [label="CheckoutController", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OrderService" [label="OrderService", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"PaymentPort" [label="PaymentPort", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OrderRepository" [label="OrderRepository", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"CardPaymentAdapter" [label="CardPaymentAdapter", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"UPIPaymentAdapter" [label="UPIPaymentAdapter", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Order" [label="Order", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"InvoiceService" [label="InvoiceService", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"NotificationService" [label="NotificationService", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"CheckoutController" -> "OrderService";
+"OrderService" -> "PaymentPort";
+"OrderService" -> "OrderRepository";
+"CardPaymentAdapter" -> "PaymentPort" [arrowhead=empty,style=dashed];
+"UPIPaymentAdapter" -> "PaymentPort" [arrowhead=empty,style=dashed];
+"OrderService" -> "Order";
+"OrderService" -> "InvoiceService";
+"OrderService" -> "NotificationService";
+}

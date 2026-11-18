@@ -1,0 +1,18 @@
+test_card_strategy_accepts_positive_amount (test_shopping_app.CheckoutTests.test_card_strategy_accepts_positive_amount) ... ok
+test_insufficient_stock_is_rejected (test_shopping_app.CheckoutTests.test_insufficient_stock_is_rejected) ... ok
+test_missing_order_returns_none (test_shopping_app.CheckoutTests.test_missing_order_returns_none) ... ok
+test_negative_quantity_is_rejected (test_shopping_app.CheckoutTests.test_negative_quantity_is_rejected) ... ok
+test_observers_receive_status_change (test_shopping_app.CheckoutTests.test_observers_receive_status_change) ... ok
+test_payment_strategy_rejects_zero_amount (test_shopping_app.CheckoutTests.test_payment_strategy_rejects_zero_amount) ... ok
+test_successful_checkout_persists_order (test_shopping_app.CheckoutTests.test_successful_checkout_persists_order) ... ok
+test_upi_strategy (test_shopping_app.CheckoutTests.test_upi_strategy) ... ok
+test_zero_quantity_is_rejected (test_shopping_app.CheckoutTests.test_zero_quantity_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK
+EMAIL: order=O1, status=CONFIRMED
+ADMIN: order=O1, status=CONFIRMED
+EMAIL: order=O5, status=CONFIRMED
+ADMIN: order=O5, status=CONFIRMED

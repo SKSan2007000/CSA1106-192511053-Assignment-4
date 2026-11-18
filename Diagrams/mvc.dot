@@ -1,0 +1,16 @@
+digraph "mvc" { rankdir=LR; bgcolor="white"; graph [label="MVC interaction for checkout", labelloc=t, fontsize=18, fontname="Arial", pad=0.25, nodesep=0.45, ranksep=0.55]; node [fontname="Arial", fontsize=10, margin="0.12,0.08"]; edge [fontname="Arial", fontsize=9, color="#52627A", arrowsize=0.7];
+"Customer" [label="Customer", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"CheckoutView" [label="CheckoutView", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"CheckoutController" [label="CheckoutController", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OrderService" [label="OrderService", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Order" [label="Order", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OrderRepository" [label="OrderRepository", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OODBMS" [label="OODBMS", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Customer" -> "CheckoutView" [label="submit"];
+"CheckoutView" -> "CheckoutController";
+"CheckoutController" -> "OrderService";
+"OrderService" -> "Order";
+"OrderService" -> "OrderRepository";
+"OrderRepository" -> "OODBMS";
+"OODBMS" -> "OrderRepository" [label="stored object"];
+}

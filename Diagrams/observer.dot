@@ -1,0 +1,11 @@
+digraph "observer" { rankdir=LR; bgcolor="white"; graph [label="Observer pattern for order status", labelloc=t, fontsize=18, fontname="Arial", pad=0.25, nodesep=0.45, ranksep=0.55]; node [fontname="Arial", fontsize=10, margin="0.12,0.08"]; edge [fontname="Arial", fontsize=9, color="#52627A", arrowsize=0.7];
+"Order" [label="Order", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"OrderObserver" [label="OrderObserver", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"EmailNotifier" [label="EmailNotifier", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"SMSNotifier" [label="SMSNotifier", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"AdminDashboard" [label="AdminDashboard", shape=box, style="rounded,filled", fillcolor="#F3F5FA", color="#52627A", fontname="Arial"];
+"Order" -> "OrderObserver" [label="notifies"];
+"OrderObserver" -> "EmailNotifier" [arrowhead=empty];
+"OrderObserver" -> "SMSNotifier" [arrowhead=empty];
+"OrderObserver" -> "AdminDashboard" [arrowhead=empty];
+}
